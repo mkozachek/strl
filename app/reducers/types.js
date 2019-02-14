@@ -4,8 +4,12 @@ export type counterStateType = {
   +counter: number
 };
 
-export type Action = {
-  +type: string
+export interface Action {
+  type: string,
+};
+
+export interface PayloadAction extends Action {
+  payload: any,
 };
 
 export type GetState = () => counterStateType;
